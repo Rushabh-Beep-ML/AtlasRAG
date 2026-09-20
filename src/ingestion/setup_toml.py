@@ -1,4 +1,4 @@
-[build-system]
+toml_content = """[build-system]
 requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
@@ -32,3 +32,9 @@ dev = [
     "black>=23.0.0",
     "ruff>=0.1.0",
 ]
+"""
+
+with open("pyproject.toml", "w", encoding="utf-8") as f:
+    f.write(toml_content)
+
+print("pyproject.toml written successfully without BOM or encoding errors.")
